@@ -1,10 +1,3 @@
-import { DefaultTheme } from "styled-components";
-
-export type ThemeType = {
-  white: DefaultTheme;
-  black: DefaultTheme;
-};
-
 export const THEME = {
   white: {
     backgroundColor: "##F8F9FA",
@@ -19,3 +12,5 @@ export const THEME = {
     boxShadow: "0px 0px 20px 2px rgba(255, 255, 255, 0.1)",
   },
 };
+
+export type ThemeType = typeof THEME;
