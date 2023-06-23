@@ -16,7 +16,7 @@ const MainPage = () => {
             themeContext?.handleSelectChange();
           }}
         >
-          🌝
+          {themeContext?.theme == "white" ? "🌝" : "🌚"}
         </S.ThemeChangeButton>
       </S.Footer>
     </S.MainContainer>
