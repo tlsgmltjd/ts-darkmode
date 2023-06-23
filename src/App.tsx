@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeType, THEME } from "./assets/theme/theme";
 import { GlobalStyle } from "./assets/theme/GlobalStyle";
 import { DefaultTheme, ThemeProvider } from "styled-components";
@@ -22,13 +21,7 @@ const App: React.FC = () => {
     <ThemeProvider theme={themeStyled}>
       <ThemeContext.Provider value={{ theme, handleSelectChange }}>
         <GlobalStyle />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/">
-              <Route index element={<P.MainPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <P.MainPage />
       </ThemeContext.Provider>
     </ThemeProvider>
   );
