@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import * as S from "./style";
-import { ThemeContext } from "../../theme/ThemeContext";
+import { ThemeContext } from "../../styles/ThemeContext";
 
 const MainPage = () => {
   const themeContext = useContext(ThemeContext);

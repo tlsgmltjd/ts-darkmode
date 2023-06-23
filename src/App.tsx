@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { ThemeType, THEME } from "./assets/theme/theme";
-import { GlobalStyle } from "./assets/theme/GlobalStyle";
+import { ThemeType, THEME } from "./styles/theme";
+import { GlobalStyle } from "./styles/GlobalStyle";
 import { DefaultTheme, ThemeProvider } from "styled-components";
-import * as P from "./assets/pages";
-import { ThemeContext } from "./assets/theme/ThemeContext";
+import * as P from "./pages";
+import { ThemeContext } from "./styles/ThemeContext";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<keyof ThemeType>("white");
