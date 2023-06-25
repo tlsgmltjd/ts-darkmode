@@ -1,9 +1,8 @@
-import { useContext } from "react";
+import { useTheme } from "styled-components";
 import * as S from "./style";
-import { ThemeContext } from "../../styles/ThemeContext";
 
-const MainPage = () => {
-  const themeContext = useContext(ThemeContext);
+const MainPage = ({ onToggle }: { onToggle: VoidFunction }) => {
+  const theme = useTheme();
 
   return (
     <S.MainContainer>
@@ -11,12 +10,8 @@ const MainPage = () => {
       <S.Content>Content</S.Content>
       <S.Footer>
         Footer
-        <S.ThemeChangeButton
-          onClick={() => {
-            themeContext?.handleSelectChange();
-          }}
-        >
-          {themeContext?.theme == "white" ? "🌝" : "🌚"}
+        <S.ThemeChangeButton onClick={onToggle}>
+          {theme.color == "black" ? "🌝" : "🌚"}
         </S.ThemeChangeButton>
       </S.Footer>
     </S.MainContainer>
